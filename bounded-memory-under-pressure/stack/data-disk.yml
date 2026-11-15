@@ -1,0 +1,10 @@
+# Used only when FOOTPRINT_DATA_DIR is set (the Google Cloud scripts set it to the server VM's
+# SSD data disk). Both services keep their data in that directory. LaserData's managed backend
+# needs a disk mounted with write barriers, which normal cloud and local disks are.
+volumes:
+  iggy-data:
+    driver: local
+    driver_opts: {type: none, o: bind, device: "${FOOTPRINT_DATA_DIR}/iggy"}
+  plane-data:
+    driver: local
+    driver_opts: {type: none, o: bind, device: "${FOOTPRINT_DATA_DIR}/plane"}
