@@ -43,7 +43,7 @@ Full tables with the lowest and highest of the three runs: [gcp-vm/results/sized
   [Laser Stack](https://github.com/laserdata/laser-stack)'s own `scripts/up` at a pinned commit.
   `stack/limits.yml` gives the server two dedicated cores and a 2 GiB memory limit.
   `stack/sized-2g.yml` sets the memory pool to 512 MiB and the write-ahead log to its minimum
-  (~128 MiB per partition), sized for a 2 GiB node as the sizing guide recommends for small nodes.
+  (~128 MiB per partition), sized for a 2 GiB node.
   Laser Stack's shipped values are meant for larger nodes.
 - **Clients:** [Laser SDK](https://docs.laserdata.com/laser-sdk) for Python, SDK default settings.
   Record size (1 KiB) and batch size (100) are taken from LaserData's own benchmark suite.
