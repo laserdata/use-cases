@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="660" viewBox="0 0 900 330" role="img" aria-label="Memory reported in public issues compared with memory measured on LaserData, log scale">
+<rect width="900" height="330" fill="#0A1722"/>
+<text x="28" y="34" style="font:600 11px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;letter-spacing:.06em;fill:#93A0B6">MEMORY: REPORTED IN PUBLIC ISSUES VS MEASURED ON LASERDATA (LOG SCALE)</text>
+<line x1="250.0" y1="56" x2="250.0" y2="260" stroke="#24344A"/>
+<text x="250.0" y="280" text-anchor="middle" style="font:400 11px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;fill:#93A0B6">10 MiB</text>
+<line x1="434.8" y1="56" x2="434.8" y2="260" stroke="#24344A"/>
+<text x="434.8" y="280" text-anchor="middle" style="font:400 11px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;fill:#93A0B6">100 MiB</text>
+<line x1="621.5" y1="56" x2="621.5" y2="260" stroke="#24344A"/>
+<text x="621.5" y="280" text-anchor="middle" style="font:400 11px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;fill:#93A0B6">1 GiB</text>
+<line x1="806.3" y1="56" x2="806.3" y2="260" stroke="#24344A"/>
+<text x="806.3" y="280" text-anchor="middle" style="font:400 11px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;fill:#93A0B6">10 GiB</text>
+<text x="28" y="82" style="font:500 14px Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;fill:#E6EBF3">Consumer behind on a 7M-record backlog</text>
+<text x="28" y="99" style="font:400 11.5px Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;fill:#93A0B6">reading all 7M records, 2 to 50 partitions</text>
+<line x1="414.0" y1="84" x2="759.6" y2="84" stroke="#3A4A60" stroke-width="2" stroke-dasharray="3 4"/>
+<circle cx="414.0" cy="84" r="8" fill="#8CC63F"/>
+<text x="414.0" y="70" text-anchor="middle" style="font:600 12px Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;fill:#8CC63F">77.2 MiB</text>
+<circle cx="759.6" cy="84" r="7" fill="#0A1722" stroke="#F6B94A" stroke-width="2.5"/>
+<text x="759.6" y="108" text-anchor="middle" style="font:500 12px Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;fill:#F6B94A">~6 GB</text>
+<text x="28" y="152" style="font:500 14px Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;fill:#E6EBF3">Producer through a network outage</text>
+<text x="28" y="169" style="font:400 11.5px Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;fill:#93A0B6">8,000 records/s for 30 min, 60 s network cut</text>
+<line x1="428.2" y1="154" x2="782.7" y2="154" stroke="#3A4A60" stroke-width="2" stroke-dasharray="3 4"/>
+<circle cx="428.2" cy="154" r="8" fill="#8CC63F"/>
+<text x="428.2" y="140" text-anchor="middle" style="font:600 12px Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;fill:#8CC63F">92 MiB</text>
+<circle cx="782.7" cy="154" r="7" fill="#0A1722" stroke="#F6B94A" stroke-width="2.5"/>
+<text x="782.7" y="178" text-anchor="middle" style="font:500 12px Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;fill:#F6B94A">~8 GB, then out of memory</text>
+<text x="28" y="222" style="font:500 14px Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;fill:#E6EBF3">Server node in the minute after a restart</text>
+<text x="28" y="239" style="font:400 11.5px Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;fill:#93A0B6">restarted while a consumer read 7M records</text>
+<rect x="250.0" y="246" width="523.9" height="7" rx="3.5" fill="rgba(180,138,232,0.35)" stroke="#B48AE8" stroke-width="1"/>
+<text x="781.9" y="253" style="font:500 11.5px Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;fill:#B48AE8">6.7 GiB being read</text>
+<line x1="570.7" y1="224" x2="750.7" y2="224" stroke="#3A4A60" stroke-width="2" stroke-dasharray="3 4"/>
+<circle cx="570.7" cy="224" r="8" fill="#8CC63F"/>
+<text x="570.7" y="210" text-anchor="middle" style="font:600 12px Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;fill:#8CC63F">544 MiB</text>
+<circle cx="750.7" cy="224" r="7" fill="#0A1722" stroke="#F6B94A" stroke-width="2.5"/>
+<text x="750.7" y="210" text-anchor="middle" style="font:500 12px Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;fill:#F6B94A">~5 GiB and 4 CPUs</text>
+<circle cx="34" cy="304" r="6" fill="#8CC63F"/><text x="46" y="308" style="font:400 12px Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;fill:#E6EBF3">Measured on LaserData, 3-node cluster (peak)</text>
+<circle cx="350" cy="304" r="5.5" fill="#0A1722" stroke="#F6B94A" stroke-width="2.5"/><text x="362" y="308" style="font:400 12px Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;fill:#E6EBF3">Reported in a public issue, on that team&apos;s own setup</text>
+<rect x="680" y="300" width="14" height="8" rx="4" fill="rgba(180,138,232,0.35)" stroke="#B48AE8"/><text x="700" y="308" style="font:400 12px Inter, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;fill:#E6EBF3">Data flowing during the restart</text>
+</svg>

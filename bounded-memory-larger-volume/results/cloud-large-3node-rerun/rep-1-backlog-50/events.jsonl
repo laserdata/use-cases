@@ -1,0 +1,4 @@
+{"t": 1794874757.6327722, "test": "backlog", "event": "phase", "phase": "preload-50p"}
+{"t": 1794875226.64127, "test": "backlog", "event": "preloaded", "partitions": 50, "records": 7000000, "writers": 1, "seconds": 467.5, "records_per_second": 14972, "failed_writers": 0}
+{"t": 1794875236.7464283, "test": "backlog", "event": "phase", "phase": "consume-50p"}
+{"t": 1794876030.143685, "test": "backlog", "event": "consumed", "partitions": 50, "records": 7000000, "received_unique": 7000000, "duplicates": 0, "missing": 0, "seconds": 792.2, "records_per_second": 8836, "consumer_settings": "Laser SDK defaults, polling='first'"}

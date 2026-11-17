@@ -1,0 +1,15 @@
+{
+  "cluster": "LaserData Cloud, cluster mode, 3 nodes", "cluster_region": "us-central1.gcp",
+  "laser_sdk": "0.9.1",
+  "python": "3.12.3",
+  "client_host_cpu": "Intel(R) Xeon(R) CPU @ 2.80GHz", "client_cores": 8, "client_memory_mib": 32088,
+  "client_zone": "us-central1-a",
+  "client_machine": "n2-standard-8",
+  "test": "restart", "scale": 1, "workers": 6, "rate": 10000,
+  "started": "2026-11-16T23:35:14Z"
+}
+preloaded 4,000,000 records in 267s
+ready: start the restart in the console, then touch /opt/fp/out-restart-r1/restart_clicked
+Terminated
+{'records_confirmed': 4207500, 'received_unique': 4207500, 'missing_confirmed': 0, 'duplicates': 0, 'missing_ranges': [], 'consumer_errors': {}, 'consumer_recreated': 0}
+status 1

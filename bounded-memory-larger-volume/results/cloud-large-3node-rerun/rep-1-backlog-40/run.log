@@ -1,0 +1,45 @@
+{
+  "cluster": "LaserData Cloud, cluster mode, 3 nodes", "cluster_region": "us-central1.gcp",
+  "laser_sdk": "0.9.1",
+  "python": "3.12.3",
+  "client_host_cpu": "Intel(R) Xeon(R) CPU @ 2.80GHz", "client_cores": 8, "client_memory_mib": 32088,
+  "client_zone": "us-central1-a",
+  "client_machine": "n2-standard-8",
+  "test": "backlog-40", "scale": 1, "workers": 6, "rate": 15000,
+  "started": "2026-11-16T23:54:37Z"
+}
+preloaded 7,000,000 records over 40 partitions in 468s (14,962/s, 1 writers, 0 failed)
+Failed to read a reply from <cluster-node-a>:8090: early eof
+Failed to read a reply from <cluster-node-a>:8090: early eof
+The link to replica 2 closed.
+The link to replica 2 closed.
+Failed to connect to <cluster-node-a>:8090: Connection refused (os error 111)
+Failed to connect to replica 2 at <cluster-node-a>:8090: Cannot establish connection
+Failed to connect to <cluster-node-a>:8090: Connection refused (os error 111)
+Failed to connect to replica 2 at <cluster-node-a>:8090: Cannot establish connection
+Failed to connect to <cluster-node-a>:8090: Connection refused (os error 111)
+Failed to connect to replica 2 at <cluster-node-a>:8090: Cannot establish connection
+Failed to connect to <cluster-node-a>:8090: Connection refused (os error 111)
+Failed to connect to replica 2 at <cluster-node-a>:8090: Cannot establish connection
+Failed to connect to <cluster-node-a>:8090: Connection refused (os error 111)
+Failed to connect to replica 2 at <cluster-node-a>:8090: Cannot establish connection
+Failed to connect to <cluster-node-a>:8090: Connection refused (os error 111)
+Failed to connect to replica 2 at <cluster-node-a>:8090: Cannot establish connection
+Failed to read a reply from <cluster-node-b>:8090: early eof
+Failed to read a reply from <cluster-node-b>:8090: early eof
+The link to replica 1 closed.
+The link to replica 1 closed.
+Failed to connect to <cluster-node-b>:8090: Connection refused (os error 111)
+Failed to connect to replica 1 at <cluster-node-b>:8090: Cannot establish connection
+Failed to connect to <cluster-node-b>:8090: Connection refused (os error 111)
+Failed to connect to replica 1 at <cluster-node-b>:8090: Cannot establish connection
+Failed to connect to <cluster-node-b>:8090: Connection refused (os error 111)
+Failed to connect to replica 1 at <cluster-node-b>:8090: Cannot establish connection
+Failed to connect to <cluster-node-b>:8090: Connection refused (os error 111)
+Failed to connect to replica 1 at <cluster-node-b>:8090: Cannot establish connection
+Failed to connect to <cluster-node-b>:8090: Connection refused (os error 111)
+Failed to connect to replica 1 at <cluster-node-b>:8090: Cannot establish connection
+Failed to connect to <cluster-node-b>:8090: Connection refused (os error 111)
+Failed to connect to replica 1 at <cluster-node-b>:8090: Cannot establish connection
+{'partitions': 40, 'records': 7000000, 'received_unique': 7000000, 'duplicates': 0, 'missing': 0, 'seconds': 908.7, 'records_per_second': 7704, 'consumer_settings': "Laser SDK defaults, polling='first'"}
+status 0

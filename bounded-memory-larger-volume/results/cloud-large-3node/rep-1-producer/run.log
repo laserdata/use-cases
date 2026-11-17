@@ -1,0 +1,554 @@
+{
+  "cluster": "LaserData Cloud, cluster mode, 3 nodes", "cluster_region": "us-central1.gcp",
+  "laser_sdk": "0.9.1",
+  "python": "3.12.3",
+  "client_host_cpu": "Intel(R) Xeon(R) CPU @ 2.80GHz", "client_cores": 8, "client_memory_mib": 32088,
+  "client_zone": "us-central1-a",
+  "client_machine": "n2-standard-8",
+  "test": "producer", "scale": 1, "workers": 6, "rate": 8000,
+  "started": "2026-11-16T06:24:22Z"
+}
+Connecting to node-3:8090 took longer than 2s.
+Failed to connect to replica 2 at node-3:8090: Cannot establish connection
+Connecting to node-1:8090 took longer than 2s.
+Failed to connect to replica 0 at node-1:8090: Cannot establish connection
+Connecting to node-2:8090 took longer than 2s.
+Failed to connect to replica 1 at node-2:8090: Cannot establish connection
+No reply to request 552 from node-2:8090 before its deadline.
+A keepalive ping failed: Disconnected
+The link to replica 1 closed.
+Connecting to node-3:8090 took longer than 2s.
+Failed to connect to replica 2 at node-3:8090: Cannot establish connection
+No reply to request 72494 from node-2:8090 before its deadline.
+Connecting to node-1:8090 took longer than 2s.
+Failed to connect to replica 0 at node-1:8090: Cannot establish connection
+No reply to request 60902 from node-1:8090 before its deadline.
+No reply to request 60903 from node-2:8090 before its deadline.
+No reply to request 60904 from node-3:8090 before its deadline.
+A keepalive ping failed: Disconnected
+A keepalive ping failed: Disconnected
+The link to replica 0 closed.
+The link to replica 1 closed.
+A keepalive ping failed: Disconnected
+The link to replica 2 closed.
+No reply to request 54959 from node-1:8090 before its deadline.
+No reply to request 54960 from node-2:8090 before its deadline.
+No reply to request 54961 from node-3:8090 before its deadline.
+A keepalive ping failed: Disconnected
+A keepalive ping failed: Disconnected
+A keepalive ping failed: Disconnected
+The link to replica 0 closed.
+The link to replica 2 closed.
+The link to replica 1 closed.
+No reply to request 54972 from node-1:8090 before its deadline.
+No reply to request 54973 from node-2:8090 before its deadline.
+No reply to request 54974 from node-3:8090 before its deadline.
+A keepalive ping failed: Disconnected
+A keepalive ping failed: Disconnected
+A keepalive ping failed: Disconnected
+The link to replica 0 closed.
+The link to replica 2 closed.
+The link to replica 1 closed.
+No reply to request 54982 from node-1:8090 before its deadline.
+No reply to request 54983 from node-2:8090 before its deadline.
+No reply to request 54984 from node-3:8090 before its deadline.
+A keepalive ping failed: Disconnected
+A keepalive ping failed: Disconnected
+The link to replica 0 closed.
+The link to replica 1 closed.
+A keepalive ping failed: Disconnected
+The link to replica 2 closed.
+No reply to request 54923 from node-1:8090 before its deadline.
+No reply to request 54924 from node-2:8090 before its deadline.
+No reply to request 54925 from node-3:8090 before its deadline.
+A keepalive ping failed: Disconnected
+A keepalive ping failed: Disconnected
+The link to replica 0 closed.
+A keepalive ping failed: Disconnected
+The link to replica 1 closed.
+The link to replica 2 closed.
+Connecting to node-2:8090 took longer than 2s.
+Failed to connect to replica 1 at node-2:8090: Cannot establish connection
+Connecting to node-2:8090 took longer than 2s.
+Failed to connect to replica 1 at node-2:8090: Cannot establish connection
+Connecting to node-1:8090 took longer than 2s.
+Failed to connect to replica 0 at node-1:8090: Cannot establish connection
+Connecting to node-3:8090 took longer than 2s.
+Failed to connect to replica 2 at node-3:8090: Cannot establish connection
+Connecting to node-1:8090 took longer than 2s.
+Failed to connect to replica 0 at node-1:8090: Cannot establish connection
+Connecting to node-2:8090 took longer than 2s.
+Failed to connect to replica 1 at node-2:8090: Cannot establish connection
+Connecting to node-3:8090 took longer than 2s.
+Failed to connect to replica 2 at node-3:8090: Cannot establish connection
+Connecting to node-2:8090 took longer than 2s.
+Failed to connect to replica 1 at node-2:8090: Cannot establish connection
+Connecting to node-1:8090 took longer than 2s.
+Failed to connect to replica 0 at node-1:8090: Cannot establish connection
+Connecting to node-1:8090 took longer than 2s.
+Failed to connect to replica 0 at node-1:8090: Cannot establish connection
+Connecting to node-2:8090 took longer than 2s.
+Failed to connect to replica 1 at node-2:8090: Cannot establish connection
+Connecting to node-3:8090 took longer than 2s.
+Failed to connect to replica 2 at node-3:8090: Cannot establish connection
+Connecting to node-2:8090 took longer than 2s.
+Failed to connect to replica 1 at node-2:8090: Cannot establish connection
+Connecting to node-2:8090 took longer than 2s.
+Failed to connect to replica 1 at node-2:8090: Cannot establish connection
+Connecting to node-3:8090 took longer than 2s.
+Failed to connect to replica 2 at node-3:8090: Cannot establish connection
+Connecting to node-3:8090 took longer than 2s.
+Failed to connect to replica 2 at node-3:8090: Cannot establish connection
+Connecting to node-1:8090 took longer than 2s.
+Failed to connect to replica 0 at node-1:8090: Cannot establish connection
+No reply to request 60933 from node-1:8090 before its deadline.
+No reply to request 60934 from node-2:8090 before its deadline.
+No reply to request 60935 from node-3:8090 before its deadline.
+A keepalive ping failed: Disconnected
+A keepalive ping failed: Disconnected
+The link to replica 0 closed.
+The link to replica 1 closed.
+The link to replica 2 closed.
+A keepalive ping failed: Disconnected
+No reply to request 72495 from node-1:8090 before its deadline.
+No reply to request 72496 from node-2:8090 before its deadline.
+No reply to request 72497 from node-3:8090 before its deadline.
+A keepalive ping failed: Disconnected
+A keepalive ping failed: Disconnected
+The link to replica 0 closed.
+The link to replica 1 closed.
+The link to replica 2 closed.
+A keepalive ping failed: Disconnected
+No reply to request 556 from node-1:8090 before its deadline.
+No reply to request 557 from node-2:8090 before its deadline.
+No reply to request 558 from node-3:8090 before its deadline.
+A keepalive ping failed: Disconnected
+A keepalive ping failed: Disconnected
+The link to replica 0 closed.
+The link to replica 2 closed.
+The link to replica 1 closed.
+A keepalive ping failed: Disconnected
+Connecting to node-2:8090 took longer than 2s.
+Failed to connect to replica 1 at node-2:8090: Cannot establish connection
+No reply to request 554 from node-1:8090 before its deadline.
+No reply to request 555 from node-2:8090 before its deadline.
+No reply to request 556 from node-3:8090 before its deadline.
+A keepalive ping failed: Disconnected
+A keepalive ping failed: Disconnected
+The link to replica 0 closed.
+The link to replica 1 closed.
+A keepalive ping failed: Disconnected
+The link to replica 2 closed.
+No reply to request 554 from node-1:8090 before its deadline.
+No reply to request 555 from node-2:8090 before its deadline.
+No reply to request 556 from node-3:8090 before its deadline.
+A keepalive ping failed: Disconnected
+A keepalive ping failed: Disconnected
+No reply to request 554 from node-1:8090 before its deadline.
+The link to replica 0 closed.
+No reply to request 555 from node-2:8090 before its deadline.
+No reply to request 556 from node-3:8090 before its deadline.
+The link to replica 1 closed.
+A keepalive ping failed: Disconnected
+A keepalive ping failed: Disconnected
+A keepalive ping failed: Disconnected
+The link to replica 2 closed.
+The link to replica 1 closed.
+The link to replica 0 closed.
+The link to replica 2 closed.
+A keepalive ping failed: Disconnected
+No reply to request 554 from node-1:8090 before its deadline.
+No reply to request 555 from node-2:8090 before its deadline.
+No reply to request 556 from node-3:8090 before its deadline.
+A keepalive ping failed: Disconnected
+A keepalive ping failed: Disconnected
+A keepalive ping failed: Disconnected
+The link to replica 1 closed.
+The link to replica 2 closed.
+The link to replica 0 closed.
+Connecting to node-3:8090 took longer than 2s.
+Failed to connect to replica 2 at node-3:8090: Cannot establish connection
+Connecting to node-1:8090 took longer than 2s.
+Failed to connect to replica 0 at node-1:8090: Cannot establish connection
+Connecting to node-1:8090 took longer than 2s.
+Failed to connect to replica 0 at node-1:8090: Cannot establish connection
+Connecting to node-1:8090 took longer than 2s.
+Failed to connect to replica 0 at node-1:8090: Cannot establish connection
+Connecting to node-3:8090 took longer than 2s.
+Failed to connect to replica 2 at node-3:8090: Cannot establish connection
+Connecting to node-2:8090 took longer than 2s.
+Failed to connect to replica 1 at node-2:8090: Cannot establish connection
+Connecting to node-1:8090 took longer than 2s.
+Failed to connect to replica 0 at node-1:8090: Cannot establish connection
+Connecting to node-3:8090 took longer than 2s.
+Failed to connect to replica 2 at node-3:8090: Cannot establish connection
+Connecting to node-1:8090 took longer than 2s.
+Failed to connect to replica 0 at node-1:8090: Cannot establish connection
+Connecting to node-1:8090 took longer than 2s.
+Failed to connect to replica 0 at node-1:8090: Cannot establish connection
+Connecting to node-1:8090 took longer than 2s.
+Failed to connect to replica 0 at node-1:8090: Cannot establish connection
+Connecting to node-2:8090 took longer than 2s.
+Failed to connect to replica 1 at node-2:8090: Cannot establish connection
+Connecting to node-2:8090 took longer than 2s.
+Failed to connect to replica 1 at node-2:8090: Cannot establish connection
+Connecting to node-3:8090 took longer than 2s.
+Failed to connect to replica 2 at node-3:8090: Cannot establish connection
+Connecting to node-3:8090 took longer than 2s.
+Failed to connect to replica 2 at node-3:8090: Cannot establish connection
+Connecting to node-2:8090 took longer than 2s.
+Failed to connect to replica 1 at node-2:8090: Cannot establish connection
+Connecting to node-2:8090 took longer than 2s.
+Failed to connect to replica 1 at node-2:8090: Cannot establish connection
+Connecting to node-1:8090 took longer than 2s.
+Failed to connect to replica 0 at node-1:8090: Cannot establish connection
+Connecting to node-3:8090 took longer than 2s.
+Failed to connect to replica 2 at node-3:8090: Cannot establish connection
+Connecting to node-2:8090 took longer than 2s.
+Failed to connect to replica 1 at node-2:8090: Cannot establish connection
+Connecting to node-3:8090 took longer than 2s.
+Failed to connect to replica 2 at node-3:8090: Cannot establish connection
+Connecting to node-3:8090 took longer than 2s.
+Failed to connect to replica 2 at node-3:8090: Cannot establish connection
+Connecting to node-2:8090 took longer than 2s.
+Failed to connect to replica 1 at node-2:8090: Cannot establish connection
+Connecting to node-1:8090 took longer than 2s.
+Failed to connect to replica 0 at node-1:8090: Cannot establish connection
+Connecting to node-2:8090 took longer than 2s.
+Failed to connect to replica 1 at node-2:8090: Cannot establish connection
+Connecting to node-1:8090 took longer than 2s.
+Failed to connect to replica 0 at node-1:8090: Cannot establish connection
+Connecting to node-1:8090 took longer than 2s.
+Failed to connect to replica 0 at node-1:8090: Cannot establish connection
+Connecting to node-2:8090 took longer than 2s.
+Failed to connect to replica 1 at node-2:8090: Cannot establish connection
+Connecting to node-2:8090 took longer than 2s.
+Failed to connect to replica 1 at node-2:8090: Cannot establish connection
+Connecting to node-2:8090 took longer than 2s.
+Failed to connect to replica 1 at node-2:8090: Cannot establish connection
+Connecting to node-2:8090 took longer than 2s.
+Failed to connect to replica 1 at node-2:8090: Cannot establish connection
+Connecting to node-3:8090 took longer than 2s.
+Failed to connect to replica 2 at node-3:8090: Cannot establish connection
+Connecting to node-3:8090 took longer than 2s.
+Failed to connect to replica 2 at node-3:8090: Cannot establish connection
+Connecting to node-1:8090 took longer than 2s.
+Failed to connect to replica 0 at node-1:8090: Cannot establish connection
+Connecting to node-2:8090 took longer than 2s.
+Failed to connect to replica 1 at node-2:8090: Cannot establish connection
+Connecting to node-3:8090 took longer than 2s.
+Failed to connect to replica 2 at node-3:8090: Cannot establish connection
+Connecting to node-3:8090 took longer than 2s.
+Failed to connect to replica 2 at node-3:8090: Cannot establish connection
+Connecting to node-2:8090 took longer than 2s.
+Failed to connect to replica 1 at node-2:8090: Cannot establish connection
+Connecting to node-3:8090 took longer than 2s.
+Failed to connect to replica 2 at node-3:8090: Cannot establish connection
+Connecting to node-3:8090 took longer than 2s.
+Failed to connect to replica 2 at node-3:8090: Cannot establish connection
+Connecting to node-1:8090 took longer than 2s.
+Failed to connect to replica 0 at node-1:8090: Cannot establish connection
+Connecting to node-2:8090 took longer than 2s.
+Failed to connect to replica 1 at node-2:8090: Cannot establish connection
+Connecting to node-1:8090 took longer than 2s.
+Failed to connect to replica 0 at node-1:8090: Cannot establish connection
+Connecting to node-1:8090 took longer than 2s.
+Failed to connect to replica 0 at node-1:8090: Cannot establish connection
+Connecting to node-2:8090 took longer than 2s.
+Failed to connect to replica 1 at node-2:8090: Cannot establish connection
+Connecting to node-1:8090 took longer than 2s.
+Failed to connect to replica 0 at node-1:8090: Cannot establish connection
+Connecting to node-2:8090 took longer than 2s.
+Failed to connect to replica 1 at node-2:8090: Cannot establish connection
+Connecting to node-1:8090 took longer than 2s.
+Failed to connect to replica 0 at node-1:8090: Cannot establish connection
+Connecting to node-1:8090 took longer than 2s.
+Failed to connect to replica 0 at node-1:8090: Cannot establish connection
+Connecting to node-2:8090 took longer than 2s.
+Failed to connect to replica 1 at node-2:8090: Cannot establish connection
+Connecting to node-3:8090 took longer than 2s.
+Failed to connect to replica 2 at node-3:8090: Cannot establish connection
+Connecting to node-3:8090 took longer than 2s.
+Failed to connect to replica 2 at node-3:8090: Cannot establish connection
+Connecting to node-3:8090 took longer than 2s.
+Failed to connect to replica 2 at node-3:8090: Cannot establish connection
+Connecting to node-2:8090 took longer than 2s.
+Failed to connect to replica 1 at node-2:8090: Cannot establish connection
+Connecting to node-1:8090 took longer than 2s.
+Failed to connect to replica 0 at node-1:8090: Cannot establish connection
+Connecting to node-3:8090 took longer than 2s.
+Failed to connect to replica 2 at node-3:8090: Cannot establish connection
+Connecting to node-2:8090 took longer than 2s.
+Failed to connect to replica 1 at node-2:8090: Cannot establish connection
+Connecting to node-2:8090 took longer than 2s.
+Failed to connect to replica 1 at node-2:8090: Cannot establish connection
+Connecting to node-3:8090 took longer than 2s.
+Failed to connect to replica 2 at node-3:8090: Cannot establish connection
+Connecting to node-2:8090 took longer than 2s.
+Failed to connect to replica 1 at node-2:8090: Cannot establish connection
+Connecting to node-3:8090 took longer than 2s.
+Failed to connect to replica 2 at node-3:8090: Cannot establish connection
+Connecting to node-1:8090 took longer than 2s.
+Failed to connect to replica 0 at node-1:8090: Cannot establish connection
+Connecting to node-3:8090 took longer than 2s.
+Failed to connect to replica 2 at node-3:8090: Cannot establish connection
+Connecting to node-2:8090 took longer than 2s.
+Failed to connect to replica 1 at node-2:8090: Cannot establish connection
+Connecting to node-2:8090 took longer than 2s.
+Failed to connect to replica 1 at node-2:8090: Cannot establish connection
+Connecting to node-1:8090 took longer than 2s.
+Failed to connect to replica 0 at node-1:8090: Cannot establish connection
+Connecting to node-1:8090 took longer than 2s.
+Failed to connect to replica 0 at node-1:8090: Cannot establish connection
+Connecting to node-3:8090 took longer than 2s.
+Failed to connect to replica 2 at node-3:8090: Cannot establish connection
+Connecting to node-1:8090 took longer than 2s.
+Failed to connect to replica 0 at node-1:8090: Cannot establish connection
+Connecting to node-1:8090 took longer than 2s.
+Failed to connect to replica 0 at node-1:8090: Cannot establish connection
+Connecting to node-2:8090 took longer than 2s.
+Failed to connect to replica 1 at node-2:8090: Cannot establish connection
+Connecting to node-1:8090 took longer than 2s.
+Failed to connect to replica 0 at node-1:8090: Cannot establish connection
+Connecting to node-3:8090 took longer than 2s.
+Failed to connect to replica 2 at node-3:8090: Cannot establish connection
+Connecting to node-2:8090 took longer than 2s.
+Failed to connect to replica 1 at node-2:8090: Cannot establish connection
+Connecting to node-1:8090 took longer than 2s.
+Failed to connect to replica 0 at node-1:8090: Cannot establish connection
+Connecting to node-3:8090 took longer than 2s.
+Failed to connect to replica 2 at node-3:8090: Cannot establish connection
+Connecting to node-3:8090 took longer than 2s.
+Failed to connect to replica 2 at node-3:8090: Cannot establish connection
+Connecting to node-3:8090 took longer than 2s.
+Failed to connect to replica 2 at node-3:8090: Cannot establish connection
+Connecting to node-1:8090 took longer than 2s.
+Failed to connect to replica 0 at node-1:8090: Cannot establish connection
+Connecting to node-2:8090 took longer than 2s.
+Failed to connect to replica 1 at node-2:8090: Cannot establish connection
+Connecting to node-3:8090 took longer than 2s.
+Failed to connect to replica 2 at node-3:8090: Cannot establish connection
+Connecting to node-1:8090 took longer than 2s.
+Failed to connect to replica 0 at node-1:8090: Cannot establish connection
+Connecting to node-2:8090 took longer than 2s.
+Failed to connect to replica 1 at node-2:8090: Cannot establish connection
+Connecting to node-1:8090 took longer than 2s.
+Failed to connect to replica 0 at node-1:8090: Cannot establish connection
+Connecting to node-2:8090 took longer than 2s.
+Failed to connect to replica 1 at node-2:8090: Cannot establish connection
+Connecting to node-2:8090 took longer than 2s.
+Failed to connect to replica 1 at node-2:8090: Cannot establish connection
+Connecting to node-2:8090 took longer than 2s.
+Failed to connect to replica 1 at node-2:8090: Cannot establish connection
+Connecting to node-3:8090 took longer than 2s.
+Failed to connect to replica 2 at node-3:8090: Cannot establish connection
+Connecting to node-1:8090 took longer than 2s.
+Failed to connect to replica 0 at node-1:8090: Cannot establish connection
+Connecting to node-2:8090 took longer than 2s.
+Failed to connect to replica 1 at node-2:8090: Cannot establish connection
+Connecting to node-2:8090 took longer than 2s.
+Failed to connect to replica 1 at node-2:8090: Cannot establish connection
+Connecting to node-1:8090 took longer than 2s.
+Failed to connect to replica 0 at node-1:8090: Cannot establish connection
+Connecting to node-3:8090 took longer than 2s.
+Failed to connect to replica 2 at node-3:8090: Cannot establish connection
+Connecting to node-3:8090 took longer than 2s.
+Failed to connect to replica 2 at node-3:8090: Cannot establish connection
+Connecting to node-3:8090 took longer than 2s.
+Failed to connect to replica 2 at node-3:8090: Cannot establish connection
+Connecting to node-3:8090 took longer than 2s.
+Failed to connect to replica 2 at node-3:8090: Cannot establish connection
+Connecting to node-1:8090 took longer than 2s.
+Failed to connect to replica 0 at node-1:8090: Cannot establish connection
+Connecting to node-2:8090 took longer than 2s.
+Failed to connect to replica 1 at node-2:8090: Cannot establish connection
+Connecting to node-3:8090 took longer than 2s.
+Failed to connect to replica 2 at node-3:8090: Cannot establish connection
+Connecting to node-1:8090 took longer than 2s.
+Failed to connect to replica 0 at node-1:8090: Cannot establish connection
+Connecting to node-1:8090 took longer than 2s.
+Failed to connect to replica 0 at node-1:8090: Cannot establish connection
+Connecting to node-3:8090 took longer than 2s.
+Failed to connect to replica 2 at node-3:8090: Cannot establish connection
+Connecting to node-2:8090 took longer than 2s.
+Failed to connect to replica 1 at node-2:8090: Cannot establish connection
+Connecting to node-2:8090 took longer than 2s.
+Failed to connect to replica 1 at node-2:8090: Cannot establish connection
+Connecting to node-2:8090 took longer than 2s.
+Failed to connect to replica 1 at node-2:8090: Cannot establish connection
+Connecting to node-3:8090 took longer than 2s.
+Failed to connect to replica 2 at node-3:8090: Cannot establish connection
+Connecting to node-2:8090 took longer than 2s.
+Failed to connect to replica 1 at node-2:8090: Cannot establish connection
+Connecting to node-2:8090 took longer than 2s.
+Failed to connect to replica 1 at node-2:8090: Cannot establish connection
+Connecting to node-2:8090 took longer than 2s.
+Failed to connect to replica 1 at node-2:8090: Cannot establish connection
+Connecting to node-1:8090 took longer than 2s.
+Failed to connect to replica 0 at node-1:8090: Cannot establish connection
+Connecting to node-1:8090 took longer than 2s.
+Failed to connect to replica 0 at node-1:8090: Cannot establish connection
+Connecting to node-3:8090 took longer than 2s.
+Failed to connect to replica 2 at node-3:8090: Cannot establish connection
+Connecting to node-3:8090 took longer than 2s.
+Failed to connect to replica 2 at node-3:8090: Cannot establish connection
+Connecting to node-1:8090 took longer than 2s.
+Failed to connect to replica 0 at node-1:8090: Cannot establish connection
+Connecting to node-1:8090 took longer than 2s.
+Failed to connect to replica 0 at node-1:8090: Cannot establish connection
+Connecting to node-1:8090 took longer than 2s.
+Failed to connect to replica 0 at node-1:8090: Cannot establish connection
+Connecting to node-1:8090 took longer than 2s.
+Failed to connect to replica 0 at node-1:8090: Cannot establish connection
+Connecting to node-1:8090 took longer than 2s.
+Failed to connect to replica 0 at node-1:8090: Cannot establish connection
+Connecting to node-2:8090 took longer than 2s.
+Failed to connect to replica 1 at node-2:8090: Cannot establish connection
+Connecting to node-1:8090 took longer than 2s.
+Failed to connect to replica 0 at node-1:8090: Cannot establish connection
+Connecting to node-3:8090 took longer than 2s.
+Failed to connect to replica 2 at node-3:8090: Cannot establish connection
+Connecting to node-2:8090 took longer than 2s.
+Failed to connect to replica 1 at node-2:8090: Cannot establish connection
+Connecting to node-1:8090 took longer than 2s.
+Failed to connect to replica 0 at node-1:8090: Cannot establish connection
+Connecting to node-2:8090 took longer than 2s.
+Failed to connect to replica 1 at node-2:8090: Cannot establish connection
+Connecting to node-1:8090 took longer than 2s.
+Failed to connect to replica 0 at node-1:8090: Cannot establish connection
+Connecting to node-3:8090 took longer than 2s.
+Failed to connect to replica 2 at node-3:8090: Cannot establish connection
+Connecting to node-2:8090 took longer than 2s.
+Failed to connect to replica 1 at node-2:8090: Cannot establish connection
+Connecting to node-2:8090 took longer than 2s.
+Failed to connect to replica 1 at node-2:8090: Cannot establish connection
+Connecting to node-1:8090 took longer than 2s.
+Failed to connect to replica 0 at node-1:8090: Cannot establish connection
+Connecting to node-2:8090 took longer than 2s.
+Failed to connect to replica 1 at node-2:8090: Cannot establish connection
+Connecting to node-3:8090 took longer than 2s.
+Failed to connect to replica 2 at node-3:8090: Cannot establish connection
+Connecting to node-2:8090 took longer than 2s.
+Failed to connect to replica 1 at node-2:8090: Cannot establish connection
+Connecting to node-3:8090 took longer than 2s.
+Failed to connect to replica 2 at node-3:8090: Cannot establish connection
+Connecting to node-3:8090 took longer than 2s.
+Failed to connect to replica 2 at node-3:8090: Cannot establish connection
+Connecting to node-1:8090 took longer than 2s.
+Failed to connect to replica 0 at node-1:8090: Cannot establish connection
+Connecting to node-2:8090 took longer than 2s.
+Failed to connect to replica 1 at node-2:8090: Cannot establish connection
+Connecting to node-2:8090 took longer than 2s.
+Failed to connect to replica 1 at node-2:8090: Cannot establish connection
+Connecting to node-2:8090 took longer than 2s.
+Failed to connect to replica 1 at node-2:8090: Cannot establish connection
+Connecting to node-2:8090 took longer than 2s.
+Failed to connect to replica 1 at node-2:8090: Cannot establish connection
+Connecting to node-2:8090 took longer than 2s.
+Failed to connect to replica 1 at node-2:8090: Cannot establish connection
+Connecting to node-3:8090 took longer than 2s.
+Failed to connect to replica 2 at node-3:8090: Cannot establish connection
+Connecting to node-3:8090 took longer than 2s.
+Failed to connect to replica 2 at node-3:8090: Cannot establish connection
+Connecting to node-2:8090 took longer than 2s.
+Failed to connect to replica 1 at node-2:8090: Cannot establish connection
+Connecting to node-3:8090 took longer than 2s.
+Failed to connect to replica 2 at node-3:8090: Cannot establish connection
+Connecting to node-1:8090 took longer than 2s.
+Failed to connect to replica 0 at node-1:8090: Cannot establish connection
+Connecting to node-2:8090 took longer than 2s.
+Failed to connect to replica 1 at node-2:8090: Cannot establish connection
+Connecting to node-1:8090 took longer than 2s.
+Failed to connect to replica 0 at node-1:8090: Cannot establish connection
+Connecting to node-2:8090 took longer than 2s.
+Failed to connect to replica 1 at node-2:8090: Cannot establish connection
+Connecting to node-2:8090 took longer than 2s.
+Failed to connect to replica 1 at node-2:8090: Cannot establish connection
+Connecting to node-1:8090 took longer than 2s.
+Failed to connect to replica 0 at node-1:8090: Cannot establish connection
+Connecting to node-1:8090 took longer than 2s.
+Failed to connect to replica 0 at node-1:8090: Cannot establish connection
+Connecting to node-2:8090 took longer than 2s.
+Failed to connect to replica 1 at node-2:8090: Cannot establish connection
+Connecting to node-3:8090 took longer than 2s.
+Failed to connect to replica 2 at node-3:8090: Cannot establish connection
+Connecting to node-3:8090 took longer than 2s.
+Failed to connect to replica 2 at node-3:8090: Cannot establish connection
+Connecting to node-2:8090 took longer than 2s.
+Failed to connect to replica 1 at node-2:8090: Cannot establish connection
+Connecting to node-1:8090 took longer than 2s.
+Failed to connect to replica 0 at node-1:8090: Cannot establish connection
+Connecting to node-1:8090 took longer than 2s.
+Failed to connect to replica 0 at node-1:8090: Cannot establish connection
+Connecting to node-1:8090 took longer than 2s.
+Failed to connect to replica 0 at node-1:8090: Cannot establish connection
+Connecting to node-1:8090 took longer than 2s.
+Failed to connect to replica 0 at node-1:8090: Cannot establish connection
+Connecting to node-3:8090 took longer than 2s.
+Failed to connect to replica 2 at node-3:8090: Cannot establish connection
+Connecting to node-3:8090 took longer than 2s.
+Failed to connect to replica 2 at node-3:8090: Cannot establish connection
+Connecting to node-1:8090 took longer than 2s.
+Failed to connect to replica 0 at node-1:8090: Cannot establish connection
+Connecting to node-3:8090 took longer than 2s.
+Failed to connect to replica 2 at node-3:8090: Cannot establish connection
+Connecting to node-3:8090 took longer than 2s.
+Failed to connect to replica 2 at node-3:8090: Cannot establish connection
+Connecting to node-3:8090 took longer than 2s.
+Failed to connect to replica 2 at node-3:8090: Cannot establish connection
+Connecting to node-3:8090 took longer than 2s.
+Failed to connect to replica 2 at node-3:8090: Cannot establish connection
+Connecting to node-2:8090 took longer than 2s.
+Failed to connect to replica 1 at node-2:8090: Cannot establish connection
+Connecting to node-3:8090 took longer than 2s.
+Failed to connect to replica 2 at node-3:8090: Cannot establish connection
+Connecting to node-2:8090 took longer than 2s.
+Failed to connect to replica 1 at node-2:8090: Cannot establish connection
+Connecting to node-1:8090 took longer than 2s.
+Failed to connect to replica 0 at node-1:8090: Cannot establish connection
+Connecting to node-2:8090 took longer than 2s.
+Failed to connect to replica 1 at node-2:8090: Cannot establish connection
+Connecting to node-1:8090 took longer than 2s.
+Failed to connect to replica 0 at node-1:8090: Cannot establish connection
+Connecting to node-1:8090 took longer than 2s.
+Failed to connect to replica 0 at node-1:8090: Cannot establish connection
+Connecting to node-1:8090 took longer than 2s.
+Failed to connect to replica 0 at node-1:8090: Cannot establish connection
+Connecting to node-3:8090 took longer than 2s.
+Failed to connect to replica 2 at node-3:8090: Cannot establish connection
+Connecting to node-2:8090 took longer than 2s.
+Failed to connect to replica 1 at node-2:8090: Cannot establish connection
+The session ended (Unauthenticated). Replica 0 signs in again.
+The session ended (Unauthenticated). Replica 1 signs in again.
+The session ended (Unauthenticated). Replica 2 signs in again.
+Connecting to node-3:8090 took longer than 2s.
+Failed to connect to replica 2 at node-3:8090: Cannot establish connection
+The session ended (Unauthenticated). Replica 2 signs in again.
+The session ended (Unauthenticated). Replica 2 signs in again.
+Connecting to node-1:8090 took longer than 2s.
+Failed to connect to replica 0 at node-1:8090: Cannot establish connection
+The session ended (Unauthenticated). Replica 1 signs in again.
+The link to replica 0 closed.
+The link to replica 2 closed.
+A keepalive ping failed: Disconnected
+A keepalive ping failed: Disconnected
+Connecting to node-1:8090 took longer than 2s.
+Failed to connect to replica 0 at node-1:8090: Cannot establish connection
+Connecting to node-3:8090 took longer than 2s.
+Failed to connect to replica 2 at node-3:8090: Cannot establish connection
+The session ended (Unauthenticated). Replica 1 signs in again.
+The session ended (Unauthenticated). Replica 2 signs in again.
+The session ended (Unauthenticated). Replica 2 signs in again.
+The session ended (Unauthenticated). Replica 2 signs in again.
+The session ended (Unauthenticated). Replica 2 signs in again.
+The session ended (Unauthenticated). Replica 0 signs in again.
+The session ended (Unauthenticated). Replica 1 signs in again.
+{'records_sent': 14400000, 'rate_target': 8000, 'partitions': 12, 'seconds': 1800.0, 'achieved_rate': 8000, 'max_behind_schedule_s': 60.6, 'outage_seconds': 60, 'failed_writes': 2, 'failures': [{'error': "PublishFailedError('publish failed to scale-outage/events: Operation 72494 has an unknown outcome')", 'committed': 0, 'unconfirmed': 100}, {'error': "PublishFailedError('publish failed to scale-outage/events: Operation 72498 has an unknown outcome')", 'committed': 0, 'unconfirmed': 1000}], 'records_reported_unconfirmed': 1100, 'producer_settings': 'Laser SDK background mode, default buffer budget, block when full'}
+{'worker': 0, 'received_unique': 2468477, 'duplicates': 0, 'consumer_errors': {}, 'consumer_recreated': 3, 'gaps_over_half_second': 5}
+{'worker': 5, 'received_unique': 2266500, 'duplicates': 0, 'consumer_errors': {}, 'consumer_recreated': 4, 'gaps_over_half_second': 2}
+{'worker': 3, 'received_unique': 2464716, 'duplicates': 0, 'consumer_errors': {}, 'consumer_recreated': 4, 'gaps_over_half_second': 4}
+{'worker': 2, 'received_unique': 2332907, 'duplicates': 0, 'consumer_errors': {}, 'consumer_recreated': 6, 'gaps_over_half_second': 3}
+{'worker': 4, 'received_unique': 2397246, 'duplicates': 0, 'consumer_errors': {}, 'consumer_recreated': 6, 'gaps_over_half_second': 2}
+{'worker': 1, 'received_unique': 2469154, 'duplicates': 0, 'consumer_errors': {}, 'consumer_recreated': 4, 'gaps_over_half_second': 4}
+{'records_expected': 14400000, 'missing': 1100, 'missing_not_reported': 0, 'missing_ranges': [[7200700, 7201799]], 'workers': 6}
+status 0

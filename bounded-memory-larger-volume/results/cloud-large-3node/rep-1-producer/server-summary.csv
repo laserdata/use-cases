@@ -1,0 +1,4 @@
+node,roles,mem_start,mem_peak_before,mem_peak_cut,mem_peak_after,mem_end,mem_after_delete,cpu_before,cpu_cut,cpu_after,cpu_max,disk_start,disk_peak,disk_after_delete,max_under_repl,max_below_quorum,min_clients_during_cut,samples
+1,f,53.2,298.4,300,752,123,123,11.7,2.4,11.2,35.4,3291,18087,3306,0,0,29,648
+2,l,58.3,302.4,322.4,712.2,129.6,129.6,18.5,4.1,16.3,40.8,3010,17806,3026,0,0,29,645
+3,f,57.2,291.4,293.4,720.1,127.1,127.1,15.9,3.4,16,96.2,3291,18087,3306,0,0,29,645

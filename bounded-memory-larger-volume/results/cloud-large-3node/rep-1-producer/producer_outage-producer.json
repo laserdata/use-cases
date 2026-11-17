@@ -1,0 +1,24 @@
+{
+  "records_sent": 14400000,
+  "rate_target": 8000,
+  "partitions": 12,
+  "seconds": 1800.0,
+  "achieved_rate": 8000,
+  "max_behind_schedule_s": 60.6,
+  "outage_seconds": 60,
+  "failed_writes": 2,
+  "failures": [
+    {
+      "error": "PublishFailedError('publish failed to scale-outage/events: Operation 72494 has an unknown outcome')",
+      "committed": 0,
+      "unconfirmed": 100
+    },
+    {
+      "error": "PublishFailedError('publish failed to scale-outage/events: Operation 72498 has an unknown outcome')",
+      "committed": 0,
+      "unconfirmed": 1000
+    }
+  ],
+  "records_reported_unconfirmed": 1100,
+  "producer_settings": "Laser SDK background mode, default buffer budget, block when full"
+}

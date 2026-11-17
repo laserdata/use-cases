@@ -1,0 +1,8 @@
+{
+  "worker": 4,
+  "received_unique": 2397246,
+  "duplicates": 0,
+  "consumer_errors": {},
+  "consumer_recreated": 6,
+  "gaps_over_half_second": 2
+}

@@ -1,0 +1,7 @@
+{"t": 1794872115.8916967, "test": "restart", "event": "phase", "phase": "preload"}
+{"t": 1794872383.5977757, "test": "restart", "event": "preloaded", "records": 4000000, "seconds": 266.7}
+{"t": 1794872388.6950965, "test": "restart", "event": "phase", "phase": "steady"}
+{"t": 1794872508.695799, "test": "restart", "event": "phase", "phase": "waiting-for-restart"}
+{"t": 1794872508.6959, "test": "restart", "event": "ready_for_restart"}
+{"t": 1794872561.7038178, "test": "restart", "event": "phase", "phase": "restarting"}
+{"t": 1794872561.7039444, "test": "restart", "event": "restart_clicked", "at": 1794872560.9906235}

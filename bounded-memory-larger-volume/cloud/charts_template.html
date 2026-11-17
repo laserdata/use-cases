@@ -1,0 +1,344 @@
+<title>LaserData Cloud Load Results</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#f7f9f8; --surface:#ffffff; --fg:#0b1a24; --muted:#4a5b66; --line:#dde4e2; --grid:#e9eeec; --band:#f0f4ef;
+  --s1:#5E9A1E; --s2:#1F64B8; --ok:#3f7d14; --warn:#9a6a00; --bad:#b3261e;
+  --c1:#2a78d6; --c2:#eb6834; --c3:#1baf7a; --c4:#eda100; --c5:#e87ba4;
+  --display:"Space Grotesk",Inter,system-ui,sans-serif; --body:Inter,system-ui,-apple-system,"Segoe UI",sans-serif; --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#071219; --surface:#0b1a24; --fg:#e8eef0; --muted:#9db0ba; --line:#1d3140; --grid:#15283a; --band:#0f2230;
+  --s1:#6C9F2F; --s2:#4C8FE0; --ok:#8cc63f; --warn:#e0b04c; --bad:#f2817a;
+  --c1:#3987e5; --c2:#d95926; --c3:#199e70; --c4:#c98500; --c5:#d55181; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#071219; --surface:#0b1a24; --fg:#e8eef0; --muted:#9db0ba; --line:#1d3140; --grid:#15283a; --band:#0f2230;
+  --s1:#6C9F2F; --s2:#4C8FE0; --ok:#8cc63f; --warn:#e0b04c; --bad:#f2817a;
+  --c1:#3987e5; --c2:#d95926; --c3:#199e70; --c4:#c98500; --c5:#d55181; color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:15px;line-height:1.55;margin:0;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:32px 56px}
+.wrap{max-width:860px;margin:0 auto;display:grid;gap:28px}
+h1,h2{font-family:var(--display);text-wrap:balance;margin:0;letter-spacing:-.01em}
+h1{font-size:clamp(26px,4vw,34px);line-height:1.15}
+h2{font-size:19px}
+.eyebrow{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600}
+p{margin:0;max-width:68ch}
+.muted{color:var(--muted)}
+a{color:inherit}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
+.tile{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;display:grid;gap:2px}
+.tile b{font-family:var(--display);font-size:26px;font-variant-numeric:tabular-nums}
+.tile span{font-size:13px;color:var(--muted)}
+section{display:grid;gap:10px}
+.chart{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 12px 6px;position:relative}
+.chart svg{display:block;width:100%;height:auto;overflow:visible}
+.legend{display:flex;gap:16px;flex-wrap:wrap;font-size:13px;color:var(--muted);padding:0 4px 6px}
+.key{display:inline-flex;align-items:center;gap:6px}
+.sw{width:12px;height:3px;border-radius:2px;display:inline-block}
+.tip{position:absolute;pointer-events:none;background:var(--fg);color:var(--bg);font-size:12px;padding:6px 8px;border-radius:6px;white-space:nowrap;font-family:var(--mono)}
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-size:14px;font-variant-numeric:tabular-nums}
+th,td{padding:9px 12px;border-bottom:1px solid var(--line);text-align:right;white-space:nowrap}
+th:first-child,td:first-child{text-align:left}
+th{font-weight:600;color:var(--muted);font-size:12px;letter-spacing:.04em;text-transform:uppercase}
+tr:last-child td{border-bottom:0}
+.pill{display:inline-block;font-size:12px;font-weight:600;padding:2px 8px;border-radius:99px;border:1px solid currentColor}
+.ok{color:var(--ok)} .warn{color:var(--warn)} .bad{color:var(--bad)} .pend{color:var(--muted)}
+dl{display:grid;grid-template-columns:max-content 1fr;gap:6px 16px;margin:0;font-size:14px}
+dt{color:var(--muted)} dd{margin:0;min-width:0}
+code{font-family:var(--mono);font-size:13px}
+ul{margin:0;padding-left:18px;display:grid;gap:6px;max-width:68ch}
+hr{border:0;border-top:1px solid var(--line);margin:8px 0}
+@media (max-width:520px){dl{grid-template-columns:1fr} dt{margin-top:6px}}
+</style>
+
+<div class="wrap">
+  <header style="display:grid;gap:10px">
+    <div class="eyebrow">Working results · not published · 16 Nov 2026 · pass 1 of 3</div>
+    <h1>Bounded memory on a Large 3-node LaserData Cloud cluster</h1>
+    <p class="muted">7 million records (1 KiB each) on a replicated 3-node LaserData Cloud cluster, set up the way teams run it in production, with no rate limits. Tests run one at a time; this page is rebuilt from the results files after each one.</p>
+  </header>
+
+  <div class="tiles" id="tiles"></div>
+
+  <section>
+    <h2>Progress</h2>
+    <div class="tbl"><table>
+      <thead><tr><th>Test</th><th style="text-align:left">What it does</th><th>Status</th></tr></thead>
+      <tbody id="progress"></tbody>
+    </table></div>
+  </section>
+
+  <section id="s-backlog">
+    <div class="eyebrow">Consumer backlog · 7M records</div>
+    <h2 id="backlog-h"></h2>
+    <p class="muted" id="backlog-p"></p>
+    <div class="legend" id="backlog-legend"></div>
+    <div class="chart" id="c-backlog"></div>
+    <div class="tbl"><table>
+      <thead><tr><th>Partitions</th><th>Records</th><th>Missing</th><th>Duplicates</th><th>Write rate</th><th>Read time</th><th>Read rate</th><th>Consumer peak</th><th>Consumer at end</th><th>Result</th></tr></thead>
+      <tbody id="backlog-tbody"></tbody>
+    </table></div>
+  </section>
+
+  <section id="s-server">
+    <div class="eyebrow">Server side · per node · from the LaserData console</div>
+    <h2 id="server-h"></h2>
+    <p class="muted">Memory of the server process (Iggy) on each of the three nodes, recorded from the console's per-node metrics every few seconds. The shaded band is the write phase (7M records at 15,000/s, nobody reading); then one consumer reads the whole backlog; at the end the test stream is deleted.</p>
+    <div class="legend"><span class="key"><i class="sw" style="background:var(--s2)"></i>Leader</span><span class="key"><i class="sw" style="background:var(--s1)"></i>Followers</span></div>
+    <div id="server-charts" style="display:grid;gap:14px"></div>
+    <div class="tbl"><table>
+      <thead><tr><th>Partitions</th><th>Server memory, writing</th><th>Server memory, reading</th><th>After stream deleted</th><th>Server CPU, writing / reading</th><th>Disk used: before → peak → after</th><th>Under-replicated</th></tr></thead>
+      <tbody id="server-tbody"></tbody>
+    </table></div>
+    <p class="muted" style="font-size:13px">Memory and CPU are the largest value across the three nodes; disk is the leader's (each node keeps a full copy). Runs at 2, 10 and 30 partitions happened before recording started: the console keeps per-node values for about 30 seconds, so passes 2 and 3 will fill them in.</p>
+  </section>
+
+  <section id="s-prod">
+    <div class="eyebrow">Producer outage · 8,000 records/s for 30 min · network cut for 60 s at minute 15</div>
+    <h2 id="prod-h"></h2>
+    <p class="muted" id="prod-p"></p>
+    <div class="chart" id="c-prod"></div>
+    <div class="tbl"><table>
+      <thead><tr><th>Phase</th><th>Producer memory, min</th><th>Max</th><th>At end of phase</th></tr></thead>
+      <tbody id="prod-tbody"></tbody>
+    </table></div>
+    <div class="tbl"><table>
+      <thead><tr><th>Records sent</th><th>Arrived</th><th>Missing</th><th>Missing and not reported to the app</th><th>Duplicates</th><th>Rate held</th></tr></thead>
+      <tbody id="prod-tbody2"></tbody>
+    </table></div>
+    <h2 style="margin-top:8px">Server memory during the producer test</h2>
+    <p class="muted" id="prod-srv-p"></p>
+    <div class="legend"><span class="key"><i class="sw" style="background:var(--s2)"></i>Leader</span><span class="key"><i class="sw" style="background:var(--s1)"></i>Followers</span></div>
+    <div class="chart" id="c-prod-srv"></div>
+  </section>
+
+  <section id="s-ramp">
+    <div class="eyebrow">Ramp-up · 1 producer · 10 partitions</div>
+    <h2 id="ramp-h"></h2>
+    <p class="muted">Bars show the rate achieved over each two-minute step; the dashed outline shows the target. The step stops on any error, any send over 2 s, or an achieved rate below 90% of target.</p>
+    <div class="chart" id="c-rate"></div>
+  </section>
+
+  <section>
+    <h2>Send time per batch of 100 records</h2>
+    <p class="muted">Time from sending one batch until the cluster acknowledged it, measured in the client.</p>
+    <div class="legend"><span class="key"><i class="sw" style="background:var(--s1)"></i>Typical (p50)</span><span class="key"><i class="sw" style="background:var(--s2)"></i>Slowest 1% (p99)</span></div>
+    <div class="chart" id="c-lat"></div>
+  </section>
+
+  <section>
+    <h2 id="mem-h"></h2>
+    <p class="muted">Resident memory of the producer process, sampled once a second from the operating system.</p>
+    <div class="chart" id="c-mem"></div>
+    <div class="tbl"><table>
+      <thead><tr><th>Target</th><th>Achieved</th><th>Errors</th><th>p50</th><th>p99</th><th>Slowest</th><th>Producer memory</th><th>Result</th></tr></thead>
+      <tbody id="ramp-tbody"></tbody>
+    </table></div>
+  </section>
+
+  <section>
+    <h2>Setup</h2>
+    <dl>
+      <dt>Cluster</dt><dd>LaserData Cloud, Standard tier, <b>Large</b> compute (4 vCPU, 15.6 GiB RAM per node), 3-node cluster with replication, GCP us-central1, single zone, 100 GB network drive per node, $1,051/month base. Iggy v0.10.3.</dd>
+      <dt>Settings</dt><dd>As deployed: memory pool 4 GiB, no partition cap, per-stream rate limits off (unlimited).</dd>
+      <dt>Client</dt><dd>One Google Cloud VM, n2-standard-8, us-central1-a (same region), Laser SDK 0.9.1 for Python. Access rule open to this VM's IP only.</dd>
+      <dt>Backlog test</dt><dd>One writer paced at 15,000 records/s writes 7,000,000 records (1 KiB, batches of 100) to a fresh stream with nobody reading; then one fresh consumer with the SDK's default settings reads all of them from the first offset. Every record carries its sequence number, so missing and duplicate records are counted. The stream is deleted afterwards.</dd>
+      <dt>Order</dt><dd>One test at a time; the console must show 3 of 3 nodes serving and 0 under-replicated partitions before the next one starts.</dd>
+      <dt>Measured</dt><dd>Client memory and CPU from <code>/proc</code> once a second; send times and record counts in the client; node health, memory and CPU from the LaserData console.</dd>
+    </dl>
+  </section>
+
+  <section>
+    <h2>Earlier: a Small cluster (15 Nov)</h2>
+    <p class="muted">Before this run, the same tests were tried on a Small cluster (2 vCPU per node, $199/month). The ramp-up held 20,000/s and a 10-partition backlog of 5M records read in a flat 72 MiB, but at 50 partitions that cluster lost quorum and did not recover. Those results are not used here. Details: <a href="https://claude.ai/artifact/2oKbDXssuqrykuys1rF4tJ" target="_blank" rel="noopener">LaserData Cloud issues list</a>.</p>
+  </section>
+</div>
+
+<script>
+const DATA=/*DATA*/null;
+const fmt=n=>n==null?'–':Math.round(n).toLocaleString('en-US');
+const NS='http://www.w3.org/2000/svg';
+function el(tag,attrs,parent,text){const e=document.createElementNS(NS,tag);for(const k in attrs)e.setAttribute(k,attrs[k]);if(text!=null)e.textContent=text;parent&&parent.appendChild(e);return e;}
+function tipFor(box){const t=document.createElement('div');t.className='tip';t.hidden=true;box.appendChild(t);
+ return {show(html,x,y){t.innerHTML=html;t.hidden=false;const bw=box.clientWidth;const w=t.offsetWidth;t.style.left=Math.max(4,Math.min(bw-w-4,x-w/2))+'px';t.style.top=Math.max(0,y-40)+'px'},hide(){t.hidden=true}}}
+const W=800,H=300,L=64,R=16,T=16,B=40;
+function axes(svg,ymax,ticks,unit){
+ for(const v of ticks){const y=T+(H-T-B)*(1-v/ymax);el('line',{x1:L,x2:W-R,y1:y,y2:y,stroke:'var(--grid)','stroke-width':1},svg);
+  el('text',{x:L-8,y:y+4,'text-anchor':'end','font-size':12,fill:'var(--muted)','font-family':'var(--mono)'},svg,unit(v));}
+ el('line',{x1:L,x2:W-R,y1:H-B,y2:H-B,stroke:'var(--muted)','stroke-width':1},svg);
+}
+const mmss=t=>`${Math.floor(t/60)}:${String(Math.round(t%60)).padStart(2,'0')}`;
+const COLORS={2:'var(--c1)',10:'var(--c2)',30:'var(--c3)',40:'var(--c4)',50:'var(--c5)'};
+const R0=DATA.ramp, BL=DATA.backlog;
+
+// tiles
+(function(){const t=[];
+ if(R0){const h=R0.steps.filter(s=>s.healthy);const top=Math.max(...R0.steps.map(s=>s.achieved));
+  t.push([fmt(top)+'/s','top rate one producer reached, 0 errors']);
+  t.push([Math.max(...R0.steps.map(s=>s.send_p99_ms))+' ms','slowest 1% of sends at any ramp-up step']);
+  t.push([Math.max(...R0.steps.map(s=>s.mem||0)).toFixed(1)+' MiB','producer peak memory across all rates']);}
+ if(BL.length){const done=BL.filter(b=>b.con);
+  if(done.length){t.push([Math.max(...done.map(b=>b.peak)).toFixed(1)+' MiB',`highest consumer memory reading 7M records (${done.map(b=>b.p).join(', ')} partitions)`]);
+   t.push([fmt(done.reduce((a,b)=>a+b.con.missing,0)),'records missing across all backlog runs']);
+  const sv=BL.filter(b=>b.server);if(sv.length){t.push([(Math.max(...sv.flatMap(b=>b.server.nodes.map(n=>n.mem_read_peak)))/1024).toFixed(2)+' GiB',`highest server memory on any node (${sv.map(b=>b.p).join(', ')} partitions); 4 GiB pool, 15.6 GiB node`]);}}}
+ document.getElementById('tiles').innerHTML=t.map(([b,s])=>`<div class="tile"><b>${b}</b><span>${s}</span></div>`).join('');
+})();
+
+// progress
+(function(){const rows=[['Connection check','write and read 1,000 records','ok','passed']];
+ rows.push(['Ramp-up','1 producer, 2k → 40k records/s, 2 min each',R0?'ok':'pend',R0?'passed':'pending']);
+ for(const p of [2,10,30,40,50]){const b=BL.find(x=>x.p===p);
+  rows.push([`Backlog, ${p} partitions`,'write 7M records, then 1 consumer reads them all',b?(b.ok?'ok':(b.con?'warn':'bad')):'pend',b?(b.ok?'passed':(b.con?'check':'failed')):'pending']);}
+ rows.push(['Producer outage','8,000/s for 30 min, 60 s network cut halfway',DATA.producer?(DATA.producer.verify.missing_not_reported===0?'ok':'bad'):'pend',DATA.producer?'passed':'pending']);
+ rows.push(['Passes 2 and 3','repeat the backlog and producer tests','pend','pending']);
+ document.getElementById('progress').innerHTML=rows.map(r=>`<tr><td>${r[0]}</td><td style="text-align:left;white-space:normal">${r[1]}</td><td><span class="pill ${r[2]}">${r[3]}</span></td></tr>`).join('');
+})();
+
+// backlog
+(function(){const done=BL.filter(b=>b.mem.length);
+ if(!BL.length){document.getElementById('s-backlog').hidden=true;return;}
+ const peaks=done.filter(b=>b.con).map(b=>b.peak);
+ document.getElementById('backlog-h').textContent=peaks.length?`One consumer read all 7M records in at most ${Math.max(...peaks).toFixed(0)} MiB${peaks.length>1?' at every partition count so far':''}`:'Consumer backlog';
+ document.getElementById('backlog-p').textContent='Resident memory of the consumer process from its start until it has read all 7,000,000 records. Lines end when the read finishes.';
+ document.getElementById('backlog-legend').innerHTML=done.map(b=>`<span class="key"><i class="sw" style="background:${COLORS[b.p]}"></i>${b.p} partitions</span>`).join('');
+ const box=document.getElementById('c-backlog');const svg=el('svg',{viewBox:`0 0 ${W} ${H}`,role:'img','aria-label':'Consumer memory while reading the backlog'},box);const tip=tipFor(box);
+ const tmaxRaw=Math.max(60,...done.map(b=>b.mem[b.mem.length-1][0]));const tmax=Math.ceil(tmaxRaw/120)*120;
+ const ymaxRaw=Math.max(...done.map(b=>b.peak));const ymax=Math.max(100,Math.ceil(ymaxRaw*1.2/25)*25);
+ const x=t=>L+(W-L-R)*t/tmax,y=v=>T+(H-T-B)*(1-v/ymax);
+ const ticks=[];for(let v=0;v<=ymax;v+=ymax/4)ticks.push(v);axes(svg,ymax,ticks,v=>Math.round(v)+' MiB');
+ done.forEach((b,i)=>{const d=b.mem.map((q,j)=>(j?'L':'M')+x(q[0])+' '+y(q[1])).join(' ');
+  el('path',{d,fill:'none',stroke:COLORS[b.p],'stroke-width':2,'stroke-linejoin':'round'},svg);
+  const e=b.mem[b.mem.length-1];el('circle',{cx:x(e[0]),cy:y(e[1]),r:4.5,fill:COLORS[b.p],stroke:'var(--surface)','stroke-width':2},svg);
+  el('text',{x:x(e[0])+(x(e[0])>W-200?-8:8),y:y(e[1])-10-14*i,'text-anchor':x(e[0])>W-200?'end':'start','font-size':12,fill:'var(--fg)','font-family':'var(--mono)'},svg,`${b.p}p · ${e[1]} MiB`);});
+ const step=tmax<=600?120:tmax<=1800?300:600;for(let t=0;t<=tmax;t+=step)el('text',{x:x(t),y:H-B+18,'text-anchor':'middle','font-size':12,fill:'var(--muted)','font-family':'var(--mono)'},svg,(t/60)+' min');
+ const cross=el('line',{y1:T,y2:H-B,stroke:'var(--muted)','stroke-width':1,visibility:'hidden'},svg);
+ const hit=el('rect',{x:L,y:T,width:W-L-R,height:H-T-B,fill:'transparent'},svg);
+ hit.addEventListener('mousemove',ev=>{const bx=box.getBoundingClientRect(),sv=svg.getBoundingClientRect();const t=Math.max(0,Math.min(tmax,((ev.clientX-sv.left)/sv.width*W-L)/(W-L-R)*tmax));
+  const parts=[];for(const b of done){let v=null;for(const q of b.mem){if(q[0]<=t)v=q[1];}if(v!=null&&t<=b.mem[b.mem.length-1][0])parts.push(`${b.p}p ${v} MiB`);}
+  cross.setAttribute('x1',x(t));cross.setAttribute('x2',x(t));cross.setAttribute('visibility','visible');
+  tip.show(`${mmss(t)} · ${parts.join(' · ')||'done'}`,ev.clientX-bx.left,ev.clientY-bx.top)});
+ hit.addEventListener('mouseleave',()=>{tip.hide();cross.setAttribute('visibility','hidden')});
+ document.getElementById('backlog-tbody').innerHTML=BL.map(b=>{const c=b.con||{},p=b.pre||{};
+  return `<tr><td>${b.p}</td><td>${fmt(c.records??p.records)}</td><td>${c.missing??'–'}</td><td>${c.duplicates??'–'}</td><td>${p.records_per_second?fmt(p.records_per_second)+'/s':'–'}</td><td>${c.seconds!=null?mmss(c.seconds):'–'}</td><td>${c.records_per_second?fmt(c.records_per_second)+'/s':'–'}</td><td>${b.peak!=null?b.peak+' MiB':'–'}</td><td>${b.end!=null?b.end+' MiB':'–'}</td><td><span class="pill ${b.ok?'ok':'bad'}">${b.ok?'✓ passed':'failed'}</span></td></tr>`}).join('');
+})();
+
+// server side
+(function(){const withS=BL.filter(b=>b.server);
+ if(!withS.length){document.getElementById('s-server').hidden=true;return;}
+ const plateau=withS.map(b=>`${b.p} partitions ${(Math.max(...b.server.nodes.map(n=>n.mem_read_peak))/1024).toFixed(2)} GiB`);
+ document.getElementById('server-h').textContent='Server memory levelled off while 7M records streamed in, stayed flat while they were read, and was returned when the stream was deleted';
+ const host=document.getElementById('server-charts');
+ const gmax=Math.max(...withS.flatMap(b=>b.server.nodes.map(n=>Math.max(...n.series.map(p=>p[1])))));
+ const ymax=Math.max(1024,Math.ceil(gmax*1.15/512)*512);
+ for(const b of withS){const s=b.server;const wrap=document.createElement('div');wrap.className='chart';const late=Math.min(...s.nodes.map(n=>n.series[0][0]));wrap.innerHTML=`<div class="legend" style="color:var(--fg);font-weight:600">${b.p} partitions${late>30?` <span style="font-weight:400;color:var(--muted)">· recording began ${(late/60).toFixed(1)} min into the write</span>`:''}</div>`;host.appendChild(wrap);
+  const svg=el('svg',{viewBox:`0 0 ${W} ${H}`,role:'img','aria-label':`Server memory per node, ${b.p} partitions`},wrap);const tip=tipFor(wrap);
+  const tmin=Math.min(...s.nodes.map(n=>n.series[0][0])),tmaxRaw=Math.max(...s.nodes.map(n=>n.series[n.series.length-1][0]));const t0=Math.min(0,tmin),tmax=Math.ceil(tmaxRaw/120)*120;
+  const x=t=>L+(W-L-R)*(t-t0)/(tmax-t0),y=v=>T+(H-T-B)*(1-v/ymax);
+  el('rect',{x:x(0),y:T,width:x(s.write_end)-x(0),height:H-T-B,fill:'var(--band)'},svg);
+  el('text',{x:x(s.write_end/2),y:T+14,'text-anchor':'middle','font-size':12,fill:'var(--muted)'},svg,'writing 7M');
+  el('text',{x:x((s.write_end+s.read_end)/2),y:T+14,'text-anchor':'middle','font-size':12,fill:'var(--muted)'},svg,'1 consumer reads all 7M');
+  el('line',{x1:x(s.read_end),x2:x(s.read_end),y1:T,y2:H-B,stroke:'var(--muted)','stroke-dasharray':'3 3'},svg);
+  el('text',{x:x(s.read_end)-6,y:T+30,'text-anchor':'end','font-size':12,fill:'var(--muted)'},svg,'stream deleted');
+  const ticks=[];for(let v=0;v<=ymax;v+=512)ticks.push(v);axes(svg,ymax,ticks,v=>v?(v/1024).toFixed(1)+' GiB':'0');
+  const sorted=[...s.nodes].sort((a,c)=>(a.role==='leader')-(c.role==='leader'));
+  for(const n of sorted){const c=n.role==='leader'?'var(--s2)':'var(--s1)';el('path',{d:n.series.map((p,i)=>(i?'L':'M')+x(p[0])+' '+y(p[1])).join(' '),fill:'none',stroke:c,'stroke-width':2,'stroke-linejoin':'round'},svg);}
+  const top=Math.max(...s.nodes.map(n=>n.mem_read_peak));el('text',{x:x(s.write_end)+8,y:y(top)-10,'font-size':12,fill:'var(--fg)','font-family':'var(--mono)'},svg,`${(top/1024).toFixed(2)} GiB`);
+  const aft=Math.max(...s.nodes.map(n=>n.mem_after??0));el('text',{x:x(s.read_end)-8,y:y(aft)-8,'text-anchor':'end','font-size':12,fill:'var(--fg)','font-family':'var(--mono)'},svg,`after delete: ${Math.round(aft)} MiB`);
+  const step=tmax<=1200?240:300;for(let t=0;t<=tmax;t+=step)el('text',{x:x(t),y:H-B+18,'text-anchor':'middle','font-size':12,fill:'var(--muted)','font-family':'var(--mono)'},svg,(t/60)+' min');
+  const cross=el('line',{y1:T,y2:H-B,stroke:'var(--muted)','stroke-width':1,visibility:'hidden'},svg);
+  const hit=el('rect',{x:L,y:T,width:W-L-R,height:H-T-B,fill:'transparent'},svg);
+  hit.addEventListener('mousemove',ev=>{const bx=wrap.getBoundingClientRect(),sv=svg.getBoundingClientRect();const t=t0+Math.max(0,Math.min(1,((ev.clientX-sv.left)/sv.width*W-L)/(W-L-R)))*(tmax-t0);
+   const parts=s.nodes.map(n=>{let v=null;for(const p of n.series){if(p[0]<=t)v=p[1]}return v==null?null:`node ${n.node}${n.role==='leader'?' (leader)':''} ${Math.round(v)} MiB`}).filter(Boolean);
+   cross.setAttribute('x1',x(t));cross.setAttribute('x2',x(t));cross.setAttribute('visibility','visible');tip.show(`${mmss(Math.max(0,t))} · ${parts.join(' · ')}`,ev.clientX-bx.left,ev.clientY-bx.top)});
+  hit.addEventListener('mouseleave',()=>{tip.hide();cross.setAttribute('visibility','hidden')});}
+ const gib=v=>v==null?'–':(v>=1024?(v/1024).toFixed(2)+' GiB':Math.round(v)+' MiB');const gb=v=>v==null?'–':(v/1024).toFixed(1)+' GB';
+ document.getElementById('server-tbody').innerHTML=[2,10,30,40,50].map(p=>{const b=BL.find(x=>x.p===p);if(!b)return '';const s=b.server;
+  if(!s)return `<tr><td>${p}</td><td colspan="6" style="text-align:left" class="muted">not recorded in pass 1</td></tr>`;
+  const N=s.nodes,mx=k=>Math.max(...N.map(n=>n[k]??0)),ld=N.find(n=>n.role==='leader')||N[0];
+  return `<tr><td>${p}</td><td>${gib(mx('mem_write_peak'))}</td><td>${gib(mx('mem_read_peak'))}</td><td>${gib(mx('mem_after'))}</td><td>${mx('cpu_write')}% / ${mx('cpu_read')}%</td><td>${gb(ld.disk_start)} → ${gb(ld.disk_peak)} → ${gb(ld.disk_after)}</td><td>${mx('under_repl')}</td></tr>`}).join('');
+})();
+
+// producer outage
+(function(){const P=DATA.producer;if(!P){document.getElementById('s-prod').hidden=true;return;}
+ const pm=P.phase_mem,b=pm['steady-before'],c=pm['network-cut'],a=pm['after-restore'];
+ document.getElementById('prod-h').textContent=`Producer memory went from ${b[1].toFixed(0)} to ${c[1].toFixed(0)} MiB during a 60-second network cut and stayed at ${a[2].toFixed(0)} MiB after; every record that did not arrive was reported to the application`;
+ document.getElementById('prod-p').textContent=`One Laser SDK producer in background mode (default buffer budget, block when full) sent 1 KiB records to a 12-partition topic at 8,000/s for 30 minutes while six consumers read them. At minute 15 every connection from the client VM to the cluster was dropped for 60 seconds. The producer held what it could, then blocked instead of growing; it fell at most ${P.prod.max_behind_schedule_s} s behind schedule and caught up. After the network came back its memory stayed at the higher level for the rest of the run. In the first blog (one self-hosted server) it peaked at 82–85 MiB and settled to 61–75 MiB by the end, so this is worth checking in passes 2 and 3.`;
+ const box=document.getElementById('c-prod');const svg=el('svg',{viewBox:`0 0 ${W} ${H}`,role:'img','aria-label':'Producer memory during the outage test'},box);const tip=tipFor(box);
+ const tmax=Math.ceil(P.mem[P.mem.length-1][0]/300)*300,ymax=Math.max(100,Math.ceil(c[1]*1.25/25)*25),x=t=>L+(W-L-R)*t/tmax,y=v=>T+(H-T-B)*(1-v/ymax);
+ el('rect',{x:x(P.cut),y:T,width:x(P.back)-x(P.cut),height:H-T-B,fill:'var(--band)'},svg);el('text',{x:x(P.cut)-6,y:T+14,'text-anchor':'end','font-size':12,fill:'var(--muted)'},svg,'network cut, 60 s');
+ {const tk=[];for(let q=0;q<=ymax;q+=25)tk.push(q);axes(svg,ymax,tk,v=>v+' MiB');}
+ const d=P.mem.map((p,i)=>(i?'L':'M')+x(p[0])+' '+y(p[1])).join(' ');el('path',{d,fill:'none',stroke:'var(--s1)','stroke-width':2,'stroke-linejoin':'round'},svg);
+ let pk=P.mem[0];for(const q of P.mem)if(q[1]>pk[1])pk=q;el('circle',{cx:x(pk[0]),cy:y(pk[1]),r:4.5,fill:'var(--s1)',stroke:'var(--surface)','stroke-width':2},svg);el('text',{x:x(pk[0])+8,y:y(pk[1])-8,'font-size':12,fill:'var(--fg)','font-family':'var(--mono)'},svg,`${pk[1]} MiB`);
+ for(let t=0;t<=tmax;t+=300)el('text',{x:x(t),y:H-B+18,'text-anchor':'middle','font-size':12,fill:'var(--muted)','font-family':'var(--mono)'},svg,(t/60)+' min');
+ const cross=el('line',{y1:T,y2:H-B,stroke:'var(--muted)','stroke-width':1,visibility:'hidden'},svg);const hit=el('rect',{x:L,y:T,width:W-L-R,height:H-T-B,fill:'transparent'},svg);
+ hit.addEventListener('mousemove',ev=>{const bx=box.getBoundingClientRect(),sv=svg.getBoundingClientRect();const t=Math.max(0,Math.min(tmax,((ev.clientX-sv.left)/sv.width*W-L)/(W-L-R)*tmax));let p=P.mem[0];for(const q of P.mem){if(q[0]<=t)p=q}cross.setAttribute('x1',x(t));cross.setAttribute('x2',x(t));cross.setAttribute('visibility','visible');tip.show(`${mmss(t)} · ${p[1]} MiB`,ev.clientX-bx.left,ev.clientY-bx.top)});
+ hit.addEventListener('mouseleave',()=>{tip.hide();cross.setAttribute('visibility','hidden')});
+ const lbl={'steady-before':'Before the cut (15 min)','network-cut':'During the 60 s cut','after-restore':'After the network came back (14 min)'};
+ document.getElementById('prod-tbody').innerHTML=['steady-before','network-cut','after-restore'].map(k=>`<tr><td>${lbl[k]}</td><td>${pm[k][0]} MiB</td><td>${pm[k][1]} MiB</td><td>${pm[k][2]} MiB</td></tr>`).join('');
+ const v=P.verify;document.getElementById('prod-tbody2').innerHTML=`<tr><td>${fmt(v.records_expected)}</td><td>${fmt(v.records_expected-v.missing)}</td><td>${fmt(v.missing)} (${P.prod.failed_writes} batches during the cut)</td><td><span class="pill ${v.missing_not_reported?'bad':'ok'}">${v.missing_not_reported}</span></td><td>${P.consumer_dups}</td><td>${fmt(P.prod.achieved_rate)}/s</td></tr>`;
+ if(P.server){const S=P.server;const top=Math.max(...S.flatMap(n=>n.series.map(p=>p[1])));const end=Math.max(...S.map(n=>n.series[n.series.length-1][1]));
+  document.getElementById('prod-srv-p').textContent=`Unlike the backlog tests, server memory on every node grew steadily through this run as the 14.4M records (about 15 GB on each node's disk) accumulated in a stream that never expires, reaching ${(top/1024).toFixed(2)} GiB; it fell back to about ${Math.round(end)} MiB when the stream was deleted. This is an open question for the LaserData team, not a result for the blog yet.`;
+  const box2=document.getElementById('c-prod-srv');const svg2=el('svg',{viewBox:`0 0 ${W} ${H}`,role:'img','aria-label':'Server memory per node during the producer test'},box2);const tip2=tipFor(box2);
+  const tm=Math.ceil(Math.max(...S.map(n=>n.series[n.series.length-1][0]))/300)*300,t0=Math.min(0,...S.map(n=>n.series[0][0])),ym=Math.max(1024,Math.ceil(top*1.2/256)*256);
+  const x2=t=>L+(W-L-R)*(t-t0)/(tm-t0),y2=v=>T+(H-T-B)*(1-v/ym);
+  el('rect',{x:x2(P.cut),y:T,width:x2(P.back)-x2(P.cut),height:H-T-B,fill:'var(--band)'},svg2);
+  const tk=[];for(let q=0;q<=ym;q+=256)tk.push(q);axes(svg2,ym,tk,q=>Math.round(q)+' MiB');
+  for(const n of [...S].sort((a,b)=>(a.role==='leader')-(b.role==='leader')))el('path',{d:n.series.map((p,i)=>(i?'L':'M')+x2(p[0])+' '+y2(p[1])).join(' '),fill:'none',stroke:n.role==='leader'?'var(--s2)':'var(--s1)','stroke-width':2,'stroke-linejoin':'round'},svg2);
+  for(let t=0;t<=tm;t+=300)el('text',{x:x2(t),y:H-B+18,'text-anchor':'middle','font-size':12,fill:'var(--muted)','font-family':'var(--mono)'},svg2,(t/60)+' min');
+  const cr=el('line',{y1:T,y2:H-B,stroke:'var(--muted)','stroke-width':1,visibility:'hidden'},svg2);const ht=el('rect',{x:L,y:T,width:W-L-R,height:H-T-B,fill:'transparent'},svg2);
+  ht.addEventListener('mousemove',ev=>{const bx=box2.getBoundingClientRect(),sv=svg2.getBoundingClientRect();const t=t0+Math.max(0,Math.min(1,((ev.clientX-sv.left)/sv.width*W-L)/(W-L-R)))*(tm-t0);const parts=S.map(n=>{let v=null;for(const p of n.series){if(p[0]<=t)v=p[1]}return v==null?null:`node ${n.node}${n.role==='leader'?' (leader)':''} ${Math.round(v)} MiB`}).filter(Boolean);cr.setAttribute('x1',x2(t));cr.setAttribute('x2',x2(t));cr.setAttribute('visibility','visible');tip2.show(`${mmss(Math.max(0,t))} · ${parts.join(' · ')}`,ev.clientX-bx.left,ev.clientY-bx.top)});
+  ht.addEventListener('mouseleave',()=>{tip2.hide();cr.setAttribute('visibility','hidden')});}
+})();
+
+// ramp
+(function(){if(!R0){for(const id of ['s-ramp'])document.getElementById(id).hidden=true;return;}
+ const steps=R0.steps;const top=Math.max(...steps.map(s=>s.achieved));
+ document.getElementById('ramp-h').textContent=`The cluster kept up with every rate the client could send, up to ${fmt(top)} records/s`;
+ {const box=document.getElementById('c-rate');const svg=el('svg',{viewBox:`0 0 ${W} ${H}`,role:'img','aria-label':'Target and achieved rate per step'},box);const tip=tipFor(box);
+  const ymax=40000;axes(svg,ymax,[0,10000,20000,30000,40000],v=>v?fmt(v/1000)+'k':'0');
+  const bw=(W-L-R)/steps.length;const y=v=>T+(H-T-B)*(1-v/ymax);
+  steps.forEach((s,i)=>{const x=L+i*bw+bw*0.22,w=bw*0.56;
+   el('rect',{x,y:y(s.target),width:w,height:H-B-y(s.target),fill:'none',stroke:'var(--muted)','stroke-dasharray':'4 3','stroke-width':1,rx:4},svg);
+   el('rect',{x:x+2,y:y(s.achieved),width:w-4,height:H-B-y(s.achieved),fill:s.healthy?'var(--s1)':'var(--s2)',rx:4},svg);
+   el('text',{x:x+w/2,y:y(s.achieved)-6,'text-anchor':'middle','font-size':12,fill:'var(--fg)','font-family':'var(--mono)'},svg,fmt(s.achieved));
+   el('text',{x:x+w/2,y:H-B+18,'text-anchor':'middle','font-size':12,fill:'var(--muted)'},svg,fmt(s.target)+'/s');
+   const hit=el('rect',{x:L+i*bw,y:T,width:bw,height:H-T-B,fill:'transparent'},svg);
+   hit.addEventListener('mousemove',ev=>{const b=box.getBoundingClientRect();tip.show(`target ${fmt(s.target)}/s · achieved ${fmt(s.achieved)}/s · ${s.errors} errors`,ev.clientX-b.left,ev.clientY-b.top)});
+   hit.addEventListener('mouseleave',tip.hide);});}
+ {const box=document.getElementById('c-lat');const svg=el('svg',{viewBox:`0 0 ${W} ${H}`,role:'img','aria-label':'p50 and p99 send time per step'},box);const tip=tipFor(box);
+  const ymax=Math.max(5,Math.ceil(Math.max(...steps.map(s=>s.send_p99_ms))*1.5));axes(svg,ymax,[0,ymax/2,ymax],v=>(+v.toFixed(1))+' ms');
+  const n=steps.length,x=i=>L+(W-L-R)*(i+0.5)/n,y=v=>T+(H-T-B)*(1-v/ymax);
+  [['send_p50_ms','var(--s1)'],['send_p99_ms','var(--s2)']].forEach(([k,c])=>{
+   el('path',{d:steps.map((s,i)=>(i?'L':'M')+x(i)+' '+y(s[k])).join(' '),fill:'none',stroke:c,'stroke-width':2,'stroke-linejoin':'round'},svg);
+   steps.forEach((s,i)=>el('circle',{cx:x(i),cy:y(s[k]),r:4.5,fill:c,stroke:'var(--surface)','stroke-width':2},svg));});
+  el('text',{x:x(0),y:y(steps[0].send_p99_ms)-10,'text-anchor':'middle','font-size':12,fill:'var(--fg)','font-family':'var(--mono)'},svg,`p99 ${steps[0].send_p99_ms} ms`);
+  el('text',{x:x(0),y:y(steps[0].send_p50_ms)+20,'text-anchor':'middle','font-size':12,fill:'var(--fg)','font-family':'var(--mono)'},svg,`p50 ${steps[0].send_p50_ms} ms`);
+  steps.forEach((s,i)=>{el('text',{x:x(i),y:H-B+18,'text-anchor':'middle','font-size':12,fill:'var(--muted)'},svg,fmt(s.target)+'/s');
+   const hit=el('rect',{x:x(i)-(W-L-R)/n/2,y:T,width:(W-L-R)/n,height:H-T-B,fill:'transparent'},svg);
+   hit.addEventListener('mousemove',ev=>{const b=box.getBoundingClientRect();tip.show(`${fmt(s.target)}/s · p50 ${s.send_p50_ms} ms · p99 ${s.send_p99_ms} ms · slowest ${s.send_max_ms} ms`,ev.clientX-b.left,ev.clientY-b.top)});
+   hit.addEventListener('mouseleave',tip.hide);});}
+ {const mem=R0.mem;const m0=mem[0][1],m1=Math.max(...mem.map(p=>p[1]));
+  document.getElementById('mem-h').textContent=`Producer memory stayed between ${m0.toFixed(0)} and ${m1.toFixed(0)} MiB while the rate went up 20×`;
+  const box=document.getElementById('c-mem');const svg=el('svg',{viewBox:`0 0 ${W} ${H}`,role:'img','aria-label':'Producer memory over the ramp-up'},box);const tip=tipFor(box);
+  const tmax=600,ymax=80,x=t=>L+(W-L-R)*Math.min(t,tmax)/tmax,y=v=>T+(H-T-B)*(1-v/ymax);
+  const off=Math.max(0,mem[mem.length-1][0]-600);const pts=mem.map(p=>[p[0]-off,p[1]]).filter(p=>p[0]>=0);
+  steps.forEach((s,i)=>{if(i%2===0)el('rect',{x:x(i*120),y:T,width:x(120)-x(0),height:H-T-B,fill:'var(--band)'},svg);
+   el('text',{x:x(i*120+60),y:T+14,'text-anchor':'middle','font-size':12,fill:'var(--muted)'},svg,fmt(s.target)+'/s');});
+  axes(svg,ymax,[0,20,40,60,80],v=>v+' MiB');
+  const d=pts.map((p,i)=>(i?'L':'M')+x(p[0])+' '+y(p[1])).join(' ');
+  el('path',{d:d+` L${x(pts[pts.length-1][0])} ${H-B} L${x(pts[0][0])} ${H-B} Z`,fill:'var(--s1)','fill-opacity':.12},svg);
+  el('path',{d,fill:'none',stroke:'var(--s1)','stroke-width':2},svg);
+  const e=pts[pts.length-1];el('circle',{cx:x(e[0]),cy:y(e[1]),r:4.5,fill:'var(--s1)',stroke:'var(--surface)','stroke-width':2},svg);
+  el('text',{x:x(e[0])-8,y:y(e[1])-12,'text-anchor':'end','font-size':12,fill:'var(--fg)','font-family':'var(--mono)'},svg,e[1]+' MiB');
+  [0,120,240,360,480,600].forEach(t=>el('text',{x:x(t),y:H-B+18,'text-anchor':'middle','font-size':12,fill:'var(--muted)','font-family':'var(--mono)'},svg,(t/60)+' min'));
+  const cross=el('line',{y1:T,y2:H-B,stroke:'var(--muted)','stroke-width':1,visibility:'hidden'},svg);
+  const hit=el('rect',{x:L,y:T,width:W-L-R,height:H-T-B,fill:'transparent'},svg);
+  hit.addEventListener('mousemove',ev=>{const b=box.getBoundingClientRect(),sv=svg.getBoundingClientRect();const t=Math.max(0,Math.min(tmax,((ev.clientX-sv.left)/sv.width*W-L)/(W-L-R)*tmax));
+   let p=pts[0];for(const q of pts){if(q[0]<=t)p=q;}cross.setAttribute('x1',x(t));cross.setAttribute('x2',x(t));cross.setAttribute('visibility','visible');
+   tip.show(`${mmss(t)} · ${p[1]} MiB`,ev.clientX-b.left,ev.clientY-b.top)});
+  hit.addEventListener('mouseleave',()=>{tip.hide();cross.setAttribute('visibility','hidden')});}
+ document.getElementById('ramp-tbody').innerHTML=steps.map(s=>`<tr><td>${fmt(s.target)}/s</td><td>${fmt(s.achieved)}/s</td><td>${s.errors}</td><td>${s.send_p50_ms} ms</td><td>${s.send_p99_ms} ms</td><td>${s.send_max_ms} ms</td><td>${s.mem!=null?s.mem+' MiB':'–'}</td><td><span class="pill ${s.healthy?'ok':'warn'}">${s.healthy?'✓ held':'stopped'}</span></td></tr>`).join('');
+})();
+</script>

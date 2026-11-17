@@ -1,0 +1,17 @@
+{
+  "cluster": "LaserData Cloud, cluster mode, 3 nodes", "cluster_region": "us-central1.gcp",
+  "laser_sdk": "0.9.1",
+  "python": "3.12.3",
+  "client_host_cpu": "Intel(R) Xeon(R) CPU @ 2.80GHz", "client_cores": 8, "client_memory_mib": 32088,
+  "client_zone": "us-central1-a",
+  "client_machine": "n2-standard-8",
+  "test": "ramp", "scale": 1, "workers": 6, "rate": 10000,
+  "started": "2026-11-16T04:21:08Z"
+}
+{'target': 2000, 'achieved': 2000, 'seconds': 120, 'errors': 0, 'send_p50_ms': 3.0, 'send_p99_ms': 3.7, 'send_max_ms': 942.4, 'healthy': True}
+{'target': 5000, 'achieved': 5000, 'seconds': 120, 'errors': 0, 'send_p50_ms': 3.0, 'send_p99_ms': 3.6, 'send_max_ms': 5.4, 'healthy': True}
+{'target': 10000, 'achieved': 10000, 'seconds': 120, 'errors': 0, 'send_p50_ms': 2.8, 'send_p99_ms': 3.4, 'send_max_ms': 364.5, 'healthy': True}
+{'target': 20000, 'achieved': 20000, 'seconds': 120, 'errors': 0, 'send_p50_ms': 2.5, 'send_p99_ms': 3.1, 'send_max_ms': 410.9, 'healthy': True}
+{'target': 40000, 'achieved': 38887, 'seconds': 120, 'errors': 0, 'send_p50_ms': 2.2, 'send_p99_ms': 3.0, 'send_max_ms': 492.6, 'healthy': True}
+last healthy rate: 40000
+status 0

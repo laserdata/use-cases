@@ -1,0 +1,10 @@
+{"t": 1794802868.6764379, "test": "ramp", "event": "phase", "phase": "rate-2000"}
+{"t": 1794802988.6783507, "test": "ramp", "event": "step", "target": 2000, "achieved": 2000, "seconds": 120, "errors": 0, "send_p50_ms": 3.0, "send_p99_ms": 3.7, "send_max_ms": 942.4, "healthy": true}
+{"t": 1794802988.6787744, "test": "ramp", "event": "phase", "phase": "rate-5000"}
+{"t": 1794803108.6801558, "test": "ramp", "event": "step", "target": 5000, "achieved": 5000, "seconds": 120, "errors": 0, "send_p50_ms": 3.0, "send_p99_ms": 3.6, "send_max_ms": 5.4, "healthy": true}
+{"t": 1794803108.680577, "test": "ramp", "event": "phase", "phase": "rate-10000"}
+{"t": 1794803228.683871, "test": "ramp", "event": "step", "target": 10000, "achieved": 10000, "seconds": 120, "errors": 0, "send_p50_ms": 2.8, "send_p99_ms": 3.4, "send_max_ms": 364.5, "healthy": true}
+{"t": 1794803228.6842973, "test": "ramp", "event": "phase", "phase": "rate-20000"}
+{"t": 1794803348.688804, "test": "ramp", "event": "step", "target": 20000, "achieved": 20000, "seconds": 120, "errors": 0, "send_p50_ms": 2.5, "send_p99_ms": 3.1, "send_max_ms": 410.9, "healthy": true}
+{"t": 1794803348.6891959, "test": "ramp", "event": "phase", "phase": "rate-40000"}
+{"t": 1794803468.6986248, "test": "ramp", "event": "step", "target": 40000, "achieved": 38887, "seconds": 120, "errors": 0, "send_p50_ms": 2.2, "send_p99_ms": 3.0, "send_max_ms": 492.6, "healthy": true}
